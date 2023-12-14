@@ -5,8 +5,10 @@ import mongoose from "mongoose";
 import postRouter from "./routes/posts.js";
 import dotenv from "dotenv";
 import path from "path";
-
+import { fileURLToPath } from "url";
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const _dirname = path.join("");
 const buildPath = path.join(_dirname, "../client/build");
 
